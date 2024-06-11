@@ -13,7 +13,7 @@ const Features = () => {
 			<h2 className="text-3xl md:text-4xl text-[#1c394f]">Designed for the future</h2>
 
 			{/* Container */}
-			<div className="flex flex-col-reverse max-w-sm  md:self-end md:flex-row items-center md:relative md:left-52 md:gap-20  md:bottom-32">
+			<div className="flex flex-col-reverse max-w-sm md:max-w-none md:self-end md:flex-row items-center md:relative md:left-52 md:gap-20  md:bottom-32">
 				{/* Text Section*/}
 				<div className="flex flex-col items-start gap-8">
 					{/* Text Block 1 */}

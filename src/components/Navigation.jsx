@@ -37,7 +37,7 @@ const Navigation = () => {
 				How to implement the hamburguer menu here without changing the 
 				current element hierarchy ??
 			*/}
-			<img className="h-[1rem] cursor-pointer"  src={hamburgerIcon} alt="menu icon" />
+			<img className="h-[1rem] cursor-pointer md:hidden"  src={hamburgerIcon} alt="menu icon" />
 		</header>
 	);
 };
