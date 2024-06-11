@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import {
 	Menu,
 	MenuButton,
@@ -12,16 +11,13 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
 }
 
-export default function MenuDrop({menuTitle, items}) {
+export default function MenuDrop({ items }) {
 	return (
 		<Menu as="div" className="relative inline-block text-left">
 			<div>
-				<MenuButton className="inline-flex w-full flex flex-row items-center gap-x-1.5 rounded-md text-[#fec3bf] hover:text-white hover:underline">
-					{menuTitle}
-					<ChevronDownIcon
-						className="-mr-1 h-5 w-5"
-						aria-hidden="true"
-					/>
+				<MenuButton className="w-full flex flex-row items-center gap-x-1.5 rounded-md text-[#fec3bf] hover:text-white hover:underline">
+					{items[0]}
+					<ChevronDownIcon className="-mr-1 h-5 w-5" aria-hidden="true" />
 				</MenuButton>
 			</div>
 
@@ -44,11 +40,11 @@ export default function MenuDrop({menuTitle, items}) {
 										"block px-4 py-2 text-sm"
 									)}
 								>
-									Contact
+									{items[1]}
 								</a>
 							)}
 						</MenuItem>
-                        <MenuItem>
+						<MenuItem>
 							{({ focus }) => (
 								<a
 									href="#"
@@ -57,11 +53,11 @@ export default function MenuDrop({menuTitle, items}) {
 										"block px-4 py-2 text-sm"
 									)}
 								>
-                                    Newsletter
+									{items[2]}
 								</a>
 							)}
 						</MenuItem>
-                        <MenuItem>
+						<MenuItem>
 							{({ focus }) => (
 								<a
 									href="#"
@@ -70,7 +66,7 @@ export default function MenuDrop({menuTitle, items}) {
 										"block px-4 py-2 text-sm"
 									)}
 								>
-									LinkedIn
+									{items[3]}
 								</a>
 							)}
 						</MenuItem>
