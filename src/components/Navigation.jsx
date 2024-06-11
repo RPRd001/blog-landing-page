@@ -1,31 +1,24 @@
 import logo from "../images/logo.svg";
-import arrowIconLight from "../images/icon-arrow-light.svg";
+import Button from "../ui/Button";
+import MenuDrop from "../ui/DropDown";
 
 const Navigation = () => {
+
+	const menuItems = ["Product", "Company", "Connect"]
+
 	return (
 		<header className="flex flex-row justify-around absolute  w-full py-6 bg-transparent">
 			<nav className="flex flex-row items-center justify-between gap-8">
 				<img src={logo} alt="Blogr Logo" className="w-20" />
 				<ul className="flex flex-row items-center gap-6 text-[#fec3bf]">
-					<li className="flex flex-row items-center gap-2">
-						Product{" "}
-						<img className="w-2" src={arrowIconLight} alt="arrow icon" />
-					</li>
-					<li className="flex flex-row items-center gap-2">
-						Company{" "}
-						<img className="w-2" src={arrowIconLight} alt="arrow icon" />
-					</li>
-					<li className="flex flex-row items-center gap-2">
-						Connect{" "}
-						<img className="w-2" src={arrowIconLight} alt="arrow icon" />
-					</li>
+					{menuItems.map((item, i) => {
+						return (<MenuDrop menuTitle={item} key={i}/>)
+					})}
 				</ul>
 			</nav>
-			<div id="button-container" className="flex flex-row gap-2 items-center">
+			<div id="button-container" className="flex flex-row gap-10 items-center">
 				<button className="text-[#fdcdc9]">Login</button>
-				<button className="border rounded-full py-1.5 px-3 bg-[#fdfefe] text-[#d35c6e]">
-					Sign Up
-				</button>
+				<Button text={"Sign Up"}/>
 			</div>
 		</header>
 	);
