@@ -9,7 +9,7 @@ const Features = () => {
 
 	return (
 
-		<section className="flex flex-col items-center py-20 overflow-hidden gap-8">
+		<section className="flex flex-col items-center pt-20 overflow-hidden gap-8">
 			<h2 className="text-3xl md:text-4xl text-[#1c394f]">Designed for the future</h2>
 
 			{/* Container */}
